@@ -1,5 +1,12 @@
 # Cloud DevSecOps Pipeline
 
+
+![Pipeline Status](https://img.shields.io/badge/Pipeline-Active-brightgreen)
+
+![Security](https://img.shields.io/badge/Security-DevSecOps-blue)
+
+![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-Automated-orange)
+
 A hands-on DevSecOps project focused on implementing automated security gates within a CI/CD pipeline using GitHub Actions and open-source security tools.
 
 ## Project Goals
