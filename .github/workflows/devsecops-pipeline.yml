@@ -1,0 +1,14 @@
+name: DevSecOps Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  hello-security:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print message
+        run: echo "DevSecOps pipeline is running successfully"
