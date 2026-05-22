@@ -1,9 +1,8 @@
-from flask import Flask, request, escape
+from flask import Flask, request, render_template_string
 
 app = Flask(__name__)
 
 @app.route("/ping")
 def ping():
     name = request.args.get("name", "world")
-    safe_name = escape(name)
-    return f"Hello {safe_name}"
+    return render_template_string("Hello {{ name }}", name=name)
