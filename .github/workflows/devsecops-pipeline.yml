@@ -36,3 +36,17 @@ jobs:
           scan-ref: app
           severity: HIGH,CRITICAL
           exit-code: 1
+
+  sast-scan:
+    name: Static Application Security Testing
+    runs-on: ubuntu-latest
+    needs: dependency-scan
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run Semgrep SAST scan
+        uses: semgrep/semgrep-action@v1
+        with:
+          config: auto
