@@ -123,6 +123,26 @@ The pipeline automatically failed the SAST stage until the vulnerable code was r
 
 ![Semgrep Command Injection Detection](docs/screenshots/semgrep-command-injection.png)
 
+---
+
+### Checkov Infrastructure as Code Findings
+
+Checkov successfully detected multiple insecure Terraform configurations during the Infrastructure as Code (IaC) scanning stage.
+
+The intentionally insecure Terraform examples included:
+- Public S3 bucket exposure risks
+- Overly permissive security group rules
+- Open SSH access from the internet
+- Unrestricted outbound traffic configurations
+
+#### Public S3 Bucket Exposure Detection
+
+![Checkov S3 Findings](docs/screenshots/checkov-s3-findings.png)
+
+#### Overly Permissive Security Group Detection
+
+![Checkov Security Group Findings](docs/screenshots/checkov-security-group-findings.png)
+
 ## Future Improvements
 
 - Full CI-integrated DAST automation
