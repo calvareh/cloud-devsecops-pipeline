@@ -104,6 +104,13 @@ terraform-secure/        # Future remediated Terraform configurations
 
 ---
 
+
+## Pipeline Execution
+
+Successful GitHub Actions DevSecOps pipeline execution:
+
+![Pipeline Success](docs/screenshots/pipeline-success.png)
+
 ## Future Improvements
 
 - Full CI-integrated DAST automation
