@@ -53,18 +53,3 @@ resource "aws_security_group" "open_web_sg" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 }
-
-resource "aws_iam_policy" "overly_permissive_policy" {
-  name = "overly-permissive-demo-policy"
-
-  policy = jsonencode({
-    Version = "2012-10-17"
-    Statement = [
-      {
-        Effect   = "Allow"
-        Action   = "*"
-        Resource = "*"
-      }
-    ]
-  })
-}
