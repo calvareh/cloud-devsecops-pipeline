@@ -82,6 +82,6 @@ jobs:
       - name: Run Checkov IaC scan
         uses: bridgecrewio/checkov-action@master
         with:
-          directory: terraform
+          directory: terraform-secure
           framework: terraform
           soft_fail: false
