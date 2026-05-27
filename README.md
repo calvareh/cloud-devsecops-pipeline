@@ -1,4 +1,4 @@
-![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-CI/CD-blue?logo=githubactions)
+[![DevSecOps Pipeline](https://github.com/calvareh/cloud-devsecops-pipeline/actions/workflows/devsecops-pipeline.yml/badge.svg)](https://github.com/calvareh/cloud-devsecops-pipeline/actions/workflows/devsecops-pipeline.yml)
 ![Docker](https://img.shields.io/badge/Docker-Containerized-blue?logo=docker)
 ![Terraform](https://img.shields.io/badge/Terraform-IaC-purple?logo=terraform)
 ![Python](https://img.shields.io/badge/Python-Application-yellow?logo=python)
