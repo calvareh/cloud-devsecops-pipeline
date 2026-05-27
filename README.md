@@ -160,6 +160,9 @@ The DAST scan identified several missing HTTP security headers and response hard
 - Missing Cross-Origin-Embedder-Policy header
 - Server version information disclosure via HTTP response headers
 
+These issues could increase exposure to risks such as clickjacking, MIME-type confusion attacks, browser policy bypasses, and unnecessary information disclosure to attackers.
+
+
 #### OWASP ZAP DAST Scan Results
 
 ![OWASP ZAP DAST Findings](docs/screenshots/zap-dast-findings.png)
