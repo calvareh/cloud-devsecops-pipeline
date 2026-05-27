@@ -147,6 +147,17 @@ The intentionally insecure Terraform examples included:
 
 ![Checkov Security Group Findings](docs/screenshots/checkov-security-group-findings.png)
 
+---
+
+## Lessons Learned
+
+- Security scanning tools can overlap in functionality, requiring careful tuning to avoid duplicate findings and alert fatigue.
+- Container vulnerabilities are often inherited from base images and operating system libraries, not only from application code.
+- Shift-left security practices help identify issues earlier in the SDLC before deployment.
+- CI/CD security gates are effective for preventing insecure code and configurations from reaching production environments.
+- Infrastructure as Code (IaC) scanning provides valuable cloud security validation before resources are deployed.
+- Security tooling requires balancing strict enforcement with developer usability and workflow efficiency.
+
 ## Future Improvements
 
 - Full CI-integrated DAST automation
