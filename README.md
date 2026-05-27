@@ -149,6 +149,22 @@ The intentionally insecure Terraform examples included:
 
 ---
 
+### OWASP ZAP Dynamic Application Security Testing (DAST)
+
+OWASP ZAP was used to perform runtime security validation against the containerized Flask application.
+
+The DAST scan identified several missing HTTP security headers and hardening opportunities, including:
+- Missing Content Security Policy (CSP)
+- Missing anti-clickjacking protections
+- Missing X-Content-Type-Options header
+- Missing browser isolation policies
+
+#### OWASP ZAP DAST Scan Results
+
+![OWASP ZAP DAST Findings](docs/screenshots/zap-dast-findings.png)
+
+---
+
 ## Lessons Learned
 
 - Security scanning tools can overlap in functionality, requiring careful tuning to avoid duplicate findings and alert fatigue.
