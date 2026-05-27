@@ -153,11 +153,12 @@ The intentionally insecure Terraform examples included:
 
 OWASP ZAP was used to perform runtime security validation against the containerized Flask application.
 
-The DAST scan identified several missing HTTP security headers and hardening opportunities, including:
-- Missing Content Security Policy (CSP)
-- Missing anti-clickjacking protections
+The DAST scan identified several missing HTTP security headers and response hardening issues, including:
+- Missing anti-clickjacking header
 - Missing X-Content-Type-Options header
-- Missing browser isolation policies
+- Missing Content Security Policy (CSP) header
+- Missing Cross-Origin-Embedder-Policy header
+- Server version information disclosure via HTTP response headers
 
 #### OWASP ZAP DAST Scan Results
 
