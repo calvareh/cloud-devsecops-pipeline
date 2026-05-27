@@ -95,6 +95,50 @@ terraform-secure/        # Future remediated Terraform configurations
 
 ---
 
+## How to Run Locally
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/calvareh/cloud-devsecops-pipeline.git
+cd cloud-devsecops-pipeline
+```
+
+### Build the Docker Image
+
+```bash
+docker build -t devsecops-demo-app .
+```
+
+### Run the Containerized Application
+
+```bash
+docker run -p 5050:5000 devsecops-demo-app
+```
+
+### Access the Application
+
+Open browser:
+
+```text
+http://localhost:5050/ping
+```
+
+Expected response:
+
+```text
+pong
+```
+
+### Execute Local OWASP ZAP DAST Scan
+
+```bash
+docker run -t zaproxy/zap-stable zap-baseline.py -t http://host.docker.internal:5050
+```
+
+---
+
+
 ## Current Status
 
 - Secret scanning implemented
