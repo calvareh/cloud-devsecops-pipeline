@@ -111,6 +111,18 @@ Successful GitHub Actions DevSecOps pipeline execution:
 
 ![Pipeline Success](docs/screenshots/pipeline-success.png)
 
+---
+
+## Example Security Findings & Remediation
+
+### Semgrep Command Injection Detection
+
+During testing, Semgrep successfully detected an unsafe command execution pattern using `os.system()` inside the Flask application.
+
+The pipeline automatically failed the SAST stage until the vulnerable code was remediated.
+
+![Semgrep Command Injection Detection](docs/screenshots/semgrep-command-injection.png)
+
 ## Future Improvements
 
 - Full CI-integrated DAST automation
