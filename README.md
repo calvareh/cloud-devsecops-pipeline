@@ -12,6 +12,10 @@ This project demonstrates how multiple security scanning technologies can be orc
 
 ---
 
+## DevSecOps Pipeline Architecture
+
+![DevSecOps Pipeline Architecture](docs/screenshots/devsecops-pipeline-architecture.png)
+
 ## Security Controls Implemented
 
 | Security Layer | Tool Used | Purpose |
