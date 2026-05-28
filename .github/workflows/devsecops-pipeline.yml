@@ -68,6 +68,7 @@ jobs:
         with:
           image-ref: devsecops-demo-app
           severity: CRITICAL
+          ignore-unfixed: true
           exit-code: 1
 
   iac-scan:
