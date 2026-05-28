@@ -24,7 +24,7 @@ This project demonstrates how multiple security scanning technologies can be orc
 | Dependency Scanning | Trivy | Detect vulnerable application dependencies |
 | Static Application Security Testing (SAST) | Semgrep | Detect insecure coding patterns |
 | Container Security Scanning | Trivy | Scan Docker images for OS/library vulnerabilities |
-| Infrastructure as Code (IaC) Scanning | Checkov | Detect insecure Terraform configurations |
+| Infrastructure as Code (IaC) Scanning | Checkov | Validate Terraform configurations and identify insecure cloud infrastructure patterns |
 | Dynamic Application Security Testing (DAST) | OWASP ZAP | Scan running web application for security weaknesses |
 
 ---
@@ -53,7 +53,7 @@ This project demonstrates how multiple security scanning technologies can be orc
 5. SAST analysis executes
 6. Container image scanning executes
 7. IaC security scanning executes
-8. DAST security validation executes
+8. DAST validation is performed locally against the running containerized application using OWASP ZAP
 9. Pipeline passes or fails based on security findings
 
 ---
@@ -92,6 +92,8 @@ docs/screenshots/        # Project screenshots
 terraform-insecure-demo/ # Intentionally insecure Terraform examples
 terraform-secure/        # Future remediated Terraform configurations
 ```
+
+> Note: Terraform examples included in `terraform-insecure-demo/` are intentionally insecure and are preserved for security testing and remediation demonstration purposes only. No AWS resources are provisioned by this repository.
 
 ---
 
@@ -146,7 +148,7 @@ docker run -t zaproxy/zap-stable zap-baseline.py -t http://host.docker.internal:
 - SAST implemented
 - Container scanning implemented
 - DAST validated locally
-- IaC scanning implemented
+- IaC scanning framework implemented with Checkov
 - Pipeline enforcement enabled
 - Security remediation workflows tested
 
@@ -195,9 +197,11 @@ The intentionally insecure Terraform examples included:
 
 ### OWASP ZAP Dynamic Application Security Testing (DAST)
 
-OWASP ZAP was used to perform runtime security validation against the containerized Flask application.
+OWASP ZAP was used to perform local runtime security validation against the containerized Flask application.
 
-The DAST scan identified several missing HTTP security headers and response hardening issues, including:
+Unlike the other security controls, the DAST scan is currently executed locally against the running Docker container and is not yet integrated into the GitHub Actions pipeline.
+
+The scan identified several missing HTTP security headers and response hardening issues, including:
 - Missing anti-clickjacking header
 - Missing X-Content-Type-Options header
 - Missing Content Security Policy (CSP) header
@@ -205,7 +209,6 @@ The DAST scan identified several missing HTTP security headers and response hard
 - Server version information disclosure via HTTP response headers
 
 These issues could increase exposure to risks such as clickjacking, MIME-type confusion attacks, browser policy bypasses, and unnecessary information disclosure to attackers.
-
 
 #### OWASP ZAP DAST Scan Results
 
