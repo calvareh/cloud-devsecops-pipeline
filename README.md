@@ -224,6 +224,8 @@ These issues could increase exposure to risks such as clickjacking, MIME-type co
 - CI/CD security gates are effective for preventing insecure code and configurations from reaching production environments.
 - Infrastructure as Code (IaC) scanning provides valuable cloud security validation before resources are deployed.
 - Security tooling requires balancing strict enforcement with developer usability and workflow efficiency.
+- Container vulnerability results can change over time as vulnerability databases are updated, even when application code has not changed.
+- Security gates should distinguish between actionable vulnerabilities with available fixes and unfixed upstream vulnerabilities that require monitoring or risk acceptance.
 
 ## Future Improvements
 
